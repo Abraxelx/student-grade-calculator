@@ -7,6 +7,7 @@ public class ClassStatistics {
     private double finalMean;
     private double successGradeMean;
     private Student bestStudent;
+    private Student worstStudent;
 
     public ClassStatistics() {
     }
@@ -35,7 +36,6 @@ public class ClassStatistics {
         this.successGradeMean = successGradeMean;
     }
 
-    private Student worstStudent;
 
     public int getACounter() {
         return ACounter;
