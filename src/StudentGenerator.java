@@ -32,7 +32,7 @@ public class StudentGenerator {
             System.out.println("Yeni Öğrenci Kaydetmek İster misiniz? E - H: ");
             String resumeParam = scanner.next();
 
-            if(resumeParam.equals("H")){
+            if(resumeParam.equals("H") || resumeParam.equals("h")){
                 resume = true;
             }
             studentList.add(student);

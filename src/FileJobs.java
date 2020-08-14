@@ -8,22 +8,22 @@ public class FileJobs {
 
     public void createFile(){
         try {
-            File myObj = new File("Students.txt");
+            File myObj = new File("src/outFile/Students.txt");
             if (myObj.createNewFile()) {
-                System.out.println("File created: " + myObj.getName());
+                System.out.println("Dosya olusturuldu : " + myObj.getName());
             } else {
-                System.out.println("File already exists.");
+                System.out.println("Bu dosya zaten mevcut.");
             }
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Hata.");
             System.out.println(e.getMessage());
         }
     }
 
     public void fileWriter(String text) throws IOException{
-            FileWriter myWriter = new FileWriter("Students.txt");
+            FileWriter myWriter = new FileWriter("src/outFile/Students.txt");
             myWriter.write(text);
-            System.out.println("Successfully wrote to the file.");
+            System.out.println("Veriler dosyaya basariyla yazildi.");
             myWriter.close();
         }
     public String stringCreator(List<Student> studentList, ClassStatistics statistics, FrequencyCounter frequencyCounter){
@@ -46,9 +46,13 @@ public class FileJobs {
                 +"B : "+ frequencyCounter.starGenerator(statistics.getBCounter()) +"\n"
                 +"C : "+ frequencyCounter.starGenerator(statistics.getCCounter()) +"\n"
                 +"D :"+ frequencyCounter.starGenerator(statistics.getDCounter()) +"\n";
-        System.out.println("Sınıf Vize Ortalaması : "+ statistics.getVizeMean() +"\n"
-                +"Sınıf Final Ortalaması : "+ statistics.getFinalMean() +"\n"
-                +"Sınıf Başarı Ortalaması : "+ statistics.getSuccessGradeMean() +"\n");
+        System.out.println("Sinif Vize Ortalamasi : "+ statistics.getVizeMean() +"\n"
+                +"Sinif Final Ortalamasi : "+ statistics.getFinalMean() +"\n"
+                +"Sinif Basari Ortalamasi : "+ statistics.getSuccessGradeMean() +"\n"
+                +"A : "+ frequencyCounter.starGenerator(statistics.getACounter()) +"\n"
+                +"B : "+ frequencyCounter.starGenerator(statistics.getBCounter()) +"\n"
+                +"C : "+ frequencyCounter.starGenerator(statistics.getCCounter()) +"\n"
+                +"D :"+ frequencyCounter.starGenerator(statistics.getDCounter()) +"\n");
         return tempWord;
 
     }
