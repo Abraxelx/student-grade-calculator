@@ -7,9 +7,10 @@ public class FrequencyCounter {
     int BCounter = 0;
     int CCounter = 0;
     int DCounter = 0;
-    ClassStatistics statistics = new ClassStatistics();
-    public void calculateFrequency(List<Student> studentList){
 
+
+    ClassStatistics statistics = new ClassStatistics();
+    public ClassStatistics calculateFrequency(List<Student> studentList){
 
         for (Student student: studentList){
             if(student.getFinalGrade().equals("A")){
@@ -26,6 +27,7 @@ public class FrequencyCounter {
         statistics.setBCounter(BCounter);
         statistics.setCCounter(CCounter);
         statistics.setDCounter(DCounter);
+        return statistics;
 
     }
 
@@ -56,8 +58,10 @@ public class FrequencyCounter {
         }
             Student bestStudent = studentMap.get(getLastElement);
             statistics.setBestStudent(bestStudent);
+            System.out.println("En başarılı Öğrenci :" + bestStudent.getNameSurname());
             Student worstStudent = studentMap.get(getFirstElement);
             statistics.setWorstStudent(worstStudent);
+            System.out.println("En Başarısız Öğrenci : " + worstStudent.getNameSurname());
         }
 
         public String starGenerator(int count){
