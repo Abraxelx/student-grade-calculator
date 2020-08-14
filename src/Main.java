@@ -15,6 +15,5 @@ public class Main {
         String text = fileJobs.stringCreator(students,statistics,frequencyCounter);
         fileJobs.createFile();
         fileJobs.fileWriter(text);
-
     }
 }

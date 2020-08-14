@@ -34,7 +34,6 @@ public class StudentGenerator {
 
             if(resumeParam.equals("H")){
                 resume = true;
-                //studentList.add(student);
             }
             studentList.add(student);
         }

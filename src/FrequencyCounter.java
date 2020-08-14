@@ -7,6 +7,9 @@ public class FrequencyCounter {
     int BCounter = 0;
     int CCounter = 0;
     int DCounter = 0;
+    double vizeMean = 0;
+    double finalMean = 0;
+    double sucessMean = 0;
 
 
     ClassStatistics statistics = new ClassStatistics();
@@ -23,6 +26,7 @@ public class FrequencyCounter {
                 DCounter = DCounter + 1;
             }
         }
+        calculateMeans(studentList);
         statistics.setACounter(ACounter);
         statistics.setBCounter(BCounter);
         statistics.setCCounter(CCounter);
@@ -71,4 +75,17 @@ public class FrequencyCounter {
         }
         return star;
         }
+        public void calculateMeans(List<Student> studentList){
+            int studentCount = studentList.size();
+            for (Student student : studentList){
+               vizeMean = vizeMean + student.getVizeDegree();
+               finalMean = finalMean + student.getFinalDegree();
+               sucessMean = sucessMean + student.getSuccessGrade();
+            }
+
+            statistics.setVizeMean(vizeMean/studentCount);
+            statistics.setFinalMean(finalMean/studentCount);
+            statistics.setSuccessGradeMean(sucessMean/studentCount);
+        }
+
 }

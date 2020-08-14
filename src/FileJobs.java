@@ -37,12 +37,19 @@ public class FileJobs {
                     +"********************************************"+"\n";
         }
              tempWord = tempWord
-                +"En iyi Öğrenci :" + statistics.getBestStudent().getNameSurname() +"\n"
+                +"En Başarılı Öğrenci :" + statistics.getBestStudent().getNameSurname() +"\n"
                 +"En Başarısız Öğrenci :" + statistics.getWorstStudent().getNameSurname() +"\n"
+                +"Sınıf Vize Ortalaması : "+ statistics.getVizeMean() +"\n"
+                +"Sınıf Final Ortalaması : "+ statistics.getFinalMean() +"\n"
+                +"Sınıf Başarı Ortalaması : "+ statistics.getSuccessGradeMean() +"\n"
                 +"A : "+ frequencyCounter.starGenerator(statistics.getACounter()) +"\n"
                 +"B : "+ frequencyCounter.starGenerator(statistics.getBCounter()) +"\n"
                 +"C : "+ frequencyCounter.starGenerator(statistics.getCCounter()) +"\n"
                 +"D :"+ frequencyCounter.starGenerator(statistics.getDCounter()) +"\n";
+        System.out.println("Sınıf Vize Ortalaması : "+ statistics.getVizeMean() +"\n"
+                +"Sınıf Final Ortalaması : "+ statistics.getFinalMean() +"\n"
+                +"Sınıf Başarı Ortalaması : "+ statistics.getSuccessGradeMean() +"\n");
         return tempWord;
+
     }
     }

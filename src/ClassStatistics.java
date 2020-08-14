@@ -3,15 +3,44 @@ public class ClassStatistics {
     private int BCounter;
     private int CCounter;
     private int DCounter;
+    private double vizeMean;
+    private double finalMean;
+    private double successGradeMean;
     private Student bestStudent;
+
+    public ClassStatistics() {
+    }
+
+    public double getVizeMean() {
+        return vizeMean;
+    }
+
+    public void setVizeMean(double vizeMean) {
+        this.vizeMean = vizeMean;
+    }
+
+    public double getFinalMean() {
+        return finalMean;
+    }
+
+    public void setFinalMean(double finalMean) {
+        this.finalMean = finalMean;
+    }
+
+    public double getSuccessGradeMean() {
+        return successGradeMean;
+    }
+
+    public void setSuccessGradeMean(double successGradeMean) {
+        this.successGradeMean = successGradeMean;
+    }
+
     private Student worstStudent;
 
     public int getACounter() {
         return ACounter;
     }
 
-    public ClassStatistics() {
-    }
 
     public void setACounter(int ACounter) {
         this.ACounter = ACounter;
