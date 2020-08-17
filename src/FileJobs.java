@@ -46,13 +46,7 @@ public class FileJobs {
                 +"B : "+ frequencyCounter.starGenerator(statistics.getBCounter()) +"\n"
                 +"C : "+ frequencyCounter.starGenerator(statistics.getCCounter()) +"\n"
                 +"D :"+ frequencyCounter.starGenerator(statistics.getDCounter()) +"\n";
-        System.out.println("Sinif Vize Ortalamasi : "+ statistics.getVizeMean() +"\n"
-                +"Sinif Final Ortalamasi : "+ statistics.getFinalMean() +"\n"
-                +"Sinif Basari Ortalamasi : "+ statistics.getSuccessGradeMean() +"\n"
-                +"A : "+ frequencyCounter.starGenerator(statistics.getACounter()) +"\n"
-                +"B : "+ frequencyCounter.starGenerator(statistics.getBCounter()) +"\n"
-                +"C : "+ frequencyCounter.starGenerator(statistics.getCCounter()) +"\n"
-                +"D :"+ frequencyCounter.starGenerator(statistics.getDCounter()) +"\n");
+        System.out.println(tempWord);
         return tempWord;
 
     }
